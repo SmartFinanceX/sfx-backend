@@ -7,8 +7,11 @@ import org.apache.lucene.document.StringField;
 import org.sfx.core.domain.IncBasicInfo;
 import org.sfx.core.domain.ResponseResult;
 
+import java.io.IOException;
+import java.util.List;
+
 public interface SearchService {
     ResponseResult flushAllIndex();
 
-
+    public List<IncBasicInfo> searchHighlightByKeyWord(String filedName, String KeyWord) throws IOException;
 }
