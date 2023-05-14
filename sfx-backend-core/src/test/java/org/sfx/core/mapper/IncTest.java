@@ -12,7 +12,7 @@ public class IncTest {
 
     @Test
     public void GetAllInfo() {
-        System.out.println(JSON.toJSON( incBasicMapper.selectList(null)));
+        System.out.println(JSON.toJSONString( incBasicMapper.selectList(null)));
     }
 
 

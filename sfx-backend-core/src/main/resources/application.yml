@@ -7,3 +7,10 @@ spring:
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+  application:
+    name: coreservice
+server:
+  port: 9001

@@ -19,7 +19,7 @@ public class IncInfoController {
         return incBasicService.selectAll();
     }
 
-    @GetMapping("/ticker/{ticker}")
+    @GetMapping("/_ticker/{ticker}")
     public ResponseResult getByTicker(@PathVariable String ticker) {
         return incBasicService.selectByTicker(ticker);
     }

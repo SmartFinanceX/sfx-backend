@@ -5,5 +5,14 @@ spring:
     url: jdbc:mysql://localhost:3306/sfx_db?characterEncoding=utf-8&serverTimezone=UTC-8&zeroDateTimeBehavior=CONVERT_TO_NULL
     password: 123456
     username: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+  application:
+    name: searchservice
+server:
+  port: 9002
+
+coreservice:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule

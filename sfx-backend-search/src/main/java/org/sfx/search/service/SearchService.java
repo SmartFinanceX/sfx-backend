@@ -1,0 +1,7 @@
+package org.sfx.search.service;
+
+import org.sfx.api.domain.ResponseResult;
+
+public interface SearchService {
+    ResponseResult searchByTicker(String ticker);
+}

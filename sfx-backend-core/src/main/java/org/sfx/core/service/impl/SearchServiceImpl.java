@@ -30,6 +30,7 @@ import java.util.List;
 
 // @Service
 @Deprecated
+@Service
 public class SearchServiceImpl implements org.sfx.core.service.SearchService {
 
 
