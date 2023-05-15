@@ -21,7 +21,10 @@ public class SearchTest {
     void SearchByTicker() {
         searchService.searchByTicker("000001");
     }
-
+    @Test
+    void SearchByKeyWord() {
+        System.out.println(searchService.searchByKeyWord("农业银行"));
+    }
     @BeforeEach
     void setUp() {
         this.restClient = new RestHighLevelClient(RestClient.builder(

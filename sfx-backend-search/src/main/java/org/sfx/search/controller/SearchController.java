@@ -17,4 +17,12 @@ public class SearchController {
     ResponseResult searchByTicker(@PathVariable String ticker) {
         return searchService.searchByTicker(ticker);
     }
+    @GetMapping("_all/{keyWord}")
+    ResponseResult searchByKeyWord(@PathVariable String keyWord) {
+        return searchService.searchByKeyWord(keyWord);
+    }
+    @GetMapping("_all/{keyWord}/{page}")
+    ResponseResult searchByKeyWord(@PathVariable String keyWord, @PathVariable int page) {
+        return searchService.searchByKeyWord(keyWord,page,10);
+    }
 }

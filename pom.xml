@@ -12,6 +12,7 @@
         <module>sfx-backend-core</module>
         <module>sfx-backend-search</module>
         <module>sfx-api</module>
+        <module>gateway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -45,6 +46,12 @@
                 <version>2.2.5.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.cloud</groupId>
+                        <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <!-- mysql驱动 -->
             <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
@@ -85,8 +92,6 @@
                 <version>3.0.6</version>
                 <scope>test</scope>
             </dependency>
-
-
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

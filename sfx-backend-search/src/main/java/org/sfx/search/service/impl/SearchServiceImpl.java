@@ -45,6 +45,28 @@ public class SearchServiceImpl implements SearchService {
         }
         return new ResponseResult(SfxResponseCode.UNKNOWN_ERROR,"未知错误");
     }
+    @Override
+    public ResponseResult searchByKeyWord(String keyword){
+        return  searchByKeyWord(keyword,1,10);
+    }
+
+    @Override
+    public ResponseResult searchByKeyWord(String keyword, int pageNum, int pageSize) {
+        SearchRequest query = new SearchRequest("inc");
+        query.source().query(QueryBuilders.matchQuery("all", keyword)).from((pageNum-1)*pageSize).size(pageSize);
+        try {
+            SearchResponse searchResponse = restHighLevelClient.search(query, RequestOptions.DEFAULT);
+            SearchResult<IncBasicInfo> handleResponse = handleResponse(searchResponse);
+            if(handleResponse.getHit()>0) {
+                return new ResponseResult(SfxResponseCode.OK,handleResponse.getHit().toString(),handleResponse.getSearchResults());
+            }
+            else return new ResponseResult(SfxResponseCode.INDEX_NOT_FIND,"无对应结果");
+        } catch (IOException e) {
+            log.error(e.getMessage());
+        }
+        return new ResponseResult(SfxResponseCode.UNKNOWN_ERROR,"未知错误");
+    }
+
     private SearchResult<IncBasicInfo> handleResponse(SearchResponse response) {
         return handleResponse( response, false);
     }
@@ -54,7 +76,7 @@ public class SearchServiceImpl implements SearchService {
         SearchHits searchHits = response.getHits();
         // 总条数
         long total = searchHits.getTotalHits().value;
-        System.out.println("总条数：" + total);
+        // System.out.println("总条数：" + total);
         // 获取文档数组
         SearchHit[] hits = searchHits.getHits();
         // 4.3.遍历
