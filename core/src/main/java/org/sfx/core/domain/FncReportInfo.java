@@ -12,6 +12,6 @@ import lombok.Data;
 public class FncReportInfo {
     String ticker;
     Short category;
-    // @TableField(typeHandler = JacksonTypeHandler.class)
+    @TableField(value = "finanace_data")
     String finanace_data;
 }
