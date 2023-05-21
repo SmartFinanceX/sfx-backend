@@ -12,6 +12,6 @@ import lombok.Data;
 public class FncReportInfo {
     String ticker;
     Short category;
-    @TableField(value = "finanace_data")
+    // @TableField(value = "finanace_data")
     String finanace_data;
 }
