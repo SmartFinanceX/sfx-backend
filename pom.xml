@@ -9,9 +9,9 @@
     <version>1.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>sfx-backend-core</module>
-        <module>sfx-backend-search</module>
-        <module>sfx-api</module>
+        <module>core</module>
+        <module>search</module>
+        <module>api</module>
         <module>gateway</module>
     </modules>
     <parent>
