@@ -2,7 +2,6 @@ package org.sfx.core.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.sfx.core.config.ResponseCode;
 
 @Data
 @AllArgsConstructor

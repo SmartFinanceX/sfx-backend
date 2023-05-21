@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>org.sfx</groupId>
-            <artifactId>sfx-api</artifactId>
+            <artifactId>api</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>

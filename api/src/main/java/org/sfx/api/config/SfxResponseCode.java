@@ -20,8 +20,15 @@ public class SfxResponseCode {
      */
     public static int INDEX_NOT_FIND=4202;
     /**
-     * Mysql数据库访问失败
+     * Mysql数据库创建失败
      *
      */
     public static int MYSQL_CREATE_ERROR=4301;
+    /**
+     * Mysql数据库访问失败
+     *
+     */
+    public static int MYSQL_SEARCH_ERROR=4302;
+
+
 }

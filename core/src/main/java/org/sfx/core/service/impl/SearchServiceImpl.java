@@ -6,14 +6,13 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.document.*;
 import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.IndexableField;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.search.highlight.*;
-import org.sfx.core.config.ResponseCode;
+import org.sfx.api.config.SfxResponseCode;
 import org.sfx.core.domain.IncBasicInfo;
 import org.sfx.core.domain.ResponseResult;
 import org.sfx.core.mapper.IncBasicMapper;
@@ -54,7 +53,7 @@ public class SearchServiceImpl implements org.sfx.core.service.SearchService {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return new ResponseResult(ResponseCode.OK,"刷新索引成功");
+        return new ResponseResult(SfxResponseCode.OK,"刷新索引成功");
     }
 
     @Autowired
