@@ -2,7 +2,7 @@ package org.sfx.core.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.sfx.api.config.SfxResponseCode;
-import org.sfx.core.domain.FncReportInfo;
+import org.sfx.api.domain.FncReportInfo;
 import org.sfx.core.domain.ResponseResult;
 import org.sfx.core.mapper.FncMapper;
 import org.sfx.core.service.FinaInfoService;

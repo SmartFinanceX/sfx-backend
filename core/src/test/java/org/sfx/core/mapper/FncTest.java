@@ -2,7 +2,7 @@ package org.sfx.core.mapper;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.junit.jupiter.api.Test;
-import org.sfx.core.domain.FncReportInfo;
+import org.sfx.api.domain.FncReportInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 

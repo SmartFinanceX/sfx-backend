@@ -1,4 +1,4 @@
-package org.sfx.core.domain;
+package org.sfx.api.domain;
 
 import com.alibaba.fastjson.JSONArray;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -12,6 +12,6 @@ import lombok.Data;
 public class FncReportInfo {
     String ticker;
     Short category;
-    // @TableField(value = "finanace_data")
-    String finanace_data;
+    @TableField(value = "finanace_data",typeHandler = JacksonTypeHandler.class)
+    JSONArray finanace_data;
 }
