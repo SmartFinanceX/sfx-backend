@@ -8,11 +8,12 @@ spring:
   cloud:
     nacos:
       server-addr: localhost:8848
+    sentinel:
+      web-context-unify: true
+      transport:
+        dashboard: http://localhost:8080/
+        clientIp: localhost
   application:
     name: searchservice
 server:
   port: 9002
-
-coreservice:
-  ribbon:
-    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
