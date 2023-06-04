@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: userservice
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    password: 123456
+    username: root
+    url: jdbc:mysql://localhost:3306/sfx_user?characterEncoding=utf-8&serverTimezone=UTC-8&zeroDateTimeBehavior=CONVERT_TO_NULL
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 9020

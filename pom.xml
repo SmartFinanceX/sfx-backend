@@ -13,6 +13,8 @@
         <module>search</module>
         <module>api</module>
         <module>gateway</module>
+        <module>user</module>
+        <module>sfx-analyze</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -106,6 +108,10 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.33</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 </project>

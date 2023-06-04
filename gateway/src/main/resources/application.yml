@@ -12,9 +12,8 @@ Spring:
           enabled: true
       routes: # 网关路由配置
         - id: core-service # 路由id，自定义，只要唯一即可
-          uri: https://antio2.cn
+          uri: lb://coreservice
           predicates: # 路由断言，也就是判断请求是否符合路由规则的条件
-            - Path=/**
             - Path=/inc/**
         - id: search-service
           uri: lb://searchservice
