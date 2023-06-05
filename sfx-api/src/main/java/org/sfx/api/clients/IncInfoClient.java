@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/inc")
 public interface IncInfoClient {
     @GetMapping("/")
-    public ResponseResult getAllInc();
+    ResponseResult getAllInc();
 
     @GetMapping("/_ticker/{ticker}")
-    public ResponseResult getByTicker(@PathVariable String ticker);
+    ResponseResult getByTicker(@PathVariable String ticker);
 }

@@ -45,6 +45,7 @@ public class InfoTest {
             }
 
         }
-        else return;
+        else {
+        }
     }
 }
