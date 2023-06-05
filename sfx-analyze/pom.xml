@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>analyze</artifactId>
+    <artifactId>sfx-analyze</artifactId>
     <packaging>jar</packaging>
 
-    <name>analyze</name>
+    <name>sfx-analyze</name>
     <url>http://maven.apache.org</url>
 
     <properties>

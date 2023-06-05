@@ -9,10 +9,10 @@
     <version>1.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>core</module>
-        <module>search</module>
-        <module>api</module>
-        <module>gateway</module>
+        <module>sfx-core</module>
+        <module>sfx-search</module>
+        <module>sfx-api</module>
+        <module>sfx-gateway</module>
         <module>sfx-auth</module>
         <module>sfx-analyze</module>
     </modules>

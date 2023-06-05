@@ -8,9 +8,9 @@
 		<version>1.0</version>
 	</parent>
 	<groupId>org.sfx</groupId>
-	<artifactId>core</artifactId>
+	<artifactId>sfx-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>core</name>
+	<name>sfx-core</name>
 	<description>智能财务系统后端核心</description>
 	<properties>
 		<java.version>17</java.version>
@@ -99,7 +99,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.sfx</groupId>
-			<artifactId>api</artifactId>
+			<artifactId>sfx-api</artifactId>
 			<version>1.0</version>
 			<scope>compile</scope>
 		</dependency>
