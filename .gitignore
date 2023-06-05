@@ -34,3 +34,5 @@ build/
 
 ### Lucene
 ./index/
+**/nacos/logs
+*.log

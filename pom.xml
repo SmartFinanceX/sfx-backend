@@ -13,7 +13,7 @@
         <module>search</module>
         <module>api</module>
         <module>gateway</module>
-        <module>user</module>
+        <module>sfx-auth</module>
         <module>sfx-analyze</module>
     </modules>
     <parent>
@@ -94,13 +94,41 @@
                 <artifactId>spring-cloud-starter-loadbalancer</artifactId>
                 <version>3.0.3</version>
             </dependency>
+
+<!--            security-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-starter-security</artifactId>-->
+<!--                <version>2.2.5.RELEASE</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.cloud</groupId>-->
+<!--                <artifactId>spring‐cloud‐starter‐oauth2</artifactId>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.security</groupId>-->
+<!--                <artifactId>spring-security-jwt</artifactId>-->
+<!--                <version>1.0.9.RELEASE</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-security-parent</artifactId>-->
+<!--                <version>2.2.5.RELEASE</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.30 </version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>3.0.6</version>
+            <version>2.5.0</version>
             <scope>test</scope>
         </dependency>
         <!--fastjson依赖-->
