@@ -1,4 +1,6 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
   application:
     name: authservice
   datasource:
@@ -9,7 +11,8 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 server:
   port: 9020
-
+  servlet:
+    context-path: /uaa
 logging:
   level:
     root: debug

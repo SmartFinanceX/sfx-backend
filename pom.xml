@@ -96,20 +96,20 @@
             </dependency>
 
 <!--            security-->
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-security-dependencies -->
 <!--            <dependency>-->
 <!--                <groupId>org.springframework.cloud</groupId>-->
-<!--                <artifactId>spring-cloud-starter-security</artifactId>-->
+<!--                <artifactId>spring-cloud-security-dependencies</artifactId>-->
 <!--                <version>2.2.5.RELEASE</version>-->
+<!--                <type>pom</type>-->
 <!--            </dependency>-->
-<!--            <dependency>-->
+
+            <!--            <dependency>-->
 <!--                <groupId>org.springframework.cloud</groupId>-->
 <!--                <artifactId>spring‐cloud‐starter‐oauth2</artifactId>-->
 <!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.security</groupId>-->
-<!--                <artifactId>spring-security-jwt</artifactId>-->
-<!--                <version>1.0.9.RELEASE</version>-->
-<!--            </dependency>-->
+
+<!--            注意不能使用该依赖↓，否则依赖冲突！！！-->
 <!--            <dependency>-->
 <!--                <groupId>org.springframework.cloud</groupId>-->
 <!--                <artifactId>spring-cloud-security-parent</artifactId>-->
@@ -117,6 +117,14 @@
 <!--                <type>pom</type>-->
 <!--                <scope>import</scope>-->
 <!--            </dependency>-->
+            <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-jwt -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-jwt</artifactId>
+                <version>1.1.1.RELEASE</version>
+            </dependency>
+
+
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>

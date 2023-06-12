@@ -48,12 +48,6 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
     private JwtAccessTokenConverter accessTokenConverter;
-//    @Bean
-//    public ClientDetailsService clientDetailsService(DataSource dataSource) {
-//        ClientDetailsService clientDetailsService = new JdbcClientDetailsService(dataSource);
-//        ((JdbcClientDetailsService) clientDetailsService).setPasswordEncoder(passwordEncoder);
-//        return clientDetailsService;
-//    }
     //客户端详情服务
     @Override
     public void configure(ClientDetailsServiceConfigurer clients)
@@ -120,7 +114,7 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
     }
 
     @Bean
-    public AuthorizationCodeServices authorizationCodeServices(DataSource dataSource) { //设置授权码模式的授权码如何存取，暂时采用内存方式
+    public AuthorizationCodeServices authorizationCodeServices(DataSource dataSource) { //设置授权码模式的授权码如何存取
 
         //return new InMemoryAuthorizationCodeServices();
        return new JdbcAuthorizationCodeServices(dataSource);
