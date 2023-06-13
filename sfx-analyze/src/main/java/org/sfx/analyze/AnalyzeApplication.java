@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class AnalyzeService
+public class AnalyzeApplication
 {
     public static void main( String[] args )
     {
-        SpringApplication.run(AnalyzeService.class);
+        SpringApplication.run(AnalyzeApplication.class);
     }
 }

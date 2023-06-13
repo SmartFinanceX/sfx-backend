@@ -9,6 +9,9 @@ spring:
     username: root
     url: jdbc:mysql://localhost:3306/sfx_user?characterEncoding=utf-8&serverTimezone=UTC-8&zeroDateTimeBehavior=CONVERT_TO_NULL
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      server-addr: localhost:8848 # Nacos地址
 server:
   port: 9020
   servlet:

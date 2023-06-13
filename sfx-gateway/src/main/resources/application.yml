@@ -19,8 +19,18 @@ Spring:
           uri: lb://searchservice
           predicates:
             - Path=/_search/**
+        - id: uaa-service
+          uri: lb://authservice
+          predicates:
+            - Path=/uaa/**
+        - id: analyze-service
+          uri: lb://analyzeservice
+          predicates:
+            - Path=/analyze/**
 server:
   port: 9000
 spring:
   main:
     web-application-type: reactive
+
+
