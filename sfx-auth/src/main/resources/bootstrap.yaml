@@ -1,0 +1,12 @@
+Spring:
+  application:
+    name:
+  profiles:
+    active:
+  cloud:
+    nacos:
+      server-addr: localhost:8848 # Nacos地址
+      config:
+        file-extension: yaml
+            
+    

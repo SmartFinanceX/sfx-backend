@@ -15,6 +15,8 @@ public class ConfigTest {
     public void getEncryptedPasswd() {
         String passwd="123456";
         log.info(passwordEncoder.encode(passwd));
+        log.info(passwordEncoder.encode("secret"));
+        log.info(String.valueOf(passwordEncoder.matches("secret","$2a$10$vBJI.qicDnLOigE4akfYf.fczKRO4DyxWqqY08A4L3huZWz2gqWrG")));
     }
 
 }

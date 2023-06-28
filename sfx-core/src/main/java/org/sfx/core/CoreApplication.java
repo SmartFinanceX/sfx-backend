@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.annotation.PropertySource;
 
-@SpringBootApplication(exclude= {SecurityAutoConfiguration.class })
+@SpringBootApplication
 @PropertySource(value = {"classpath:sfx.properties"})
 @MapperScan(value = {"org.sfx.core.mapper"})
 public class CoreApplication {

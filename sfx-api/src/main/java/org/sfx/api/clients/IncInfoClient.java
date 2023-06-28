@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @FeignClient(name = "coreservice",url="coreservice")
 @RequestMapping("/inc")
 public interface IncInfoClient {
-    @GetMapping("/")
+    @GetMapping("/_all")
     ResponseResult getAllInc();
 
     @GetMapping("/_ticker/{ticker}")
