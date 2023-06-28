@@ -27,8 +27,6 @@ public class SecureConfig {
     CheckTokenFilter checkTokenFilter;
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-        AnonymousAuthenticationProvider anonymousAuthenticationProvider =
-                new AnonymousAuthenticationProvider("test");
         http
                 .authorizeExchange(exchange -> exchange
                         .pathMatchers("/uaa/**").permitAll()
@@ -36,8 +34,7 @@ public class SecureConfig {
                         .pathMatchers(HttpMethod.OPTIONS).permitAll()
                                 .anyExchange().permitAll()
                         // .anyExchange().access(defaultAuthorizationManager)
-                )
-                .anonymous().authenticationFilter(new AnonymousAuthenticationWebFilter("jwt")).key("jwt");
+                );
         http.csrf().disable();
         http.addFilterBefore(requestLogFilter, SecurityWebFiltersOrder.AUTHENTICATION)
                //  .addFilterBefore(checkTokenFilter,SecurityWebFiltersOrder.FIRST);

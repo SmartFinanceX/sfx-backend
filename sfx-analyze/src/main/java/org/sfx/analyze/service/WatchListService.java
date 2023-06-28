@@ -18,7 +18,7 @@ public class WatchListService {
     @Autowired
     WatchListMapper watchListMapper;
 
-    List<String> getWatchList(Long userId) {
+    public List<String> getWatchList(Long userId) {
         LambdaQueryWrapper<WatchList> watchListMapperLambdaQueryWrapper = new LambdaQueryWrapper<>();
         watchListMapperLambdaQueryWrapper.eq(WatchList::getUserId,userId);
         List<WatchList> watchLists = watchListMapper.selectList(watchListMapperLambdaQueryWrapper);
@@ -34,7 +34,7 @@ public class WatchListService {
      * @param ticker
      * @return
      */
-    boolean addOneTicker(Long userId,String ticker) {
+    public boolean addOneTicker(Long userId,String ticker) {
         LambdaQueryWrapper<WatchList> watchListMapperLambdaQueryWrapper = new LambdaQueryWrapper<>();
         watchListMapperLambdaQueryWrapper.eq(WatchList::getUserId,userId).eq(WatchList::getWatchTicker,ticker);
         // TODO(AntiO2) rpc调用，检查是否存在用户和股票代码
@@ -45,7 +45,7 @@ public class WatchListService {
         }
         return false; // 添加失败
     }
-    boolean deleteWatchTicker(Long userId,String ticker) {
+    public boolean deleteWatchTicker(Long userId,String ticker) {
         LambdaQueryWrapper<WatchList> watchListMapperLambdaQueryWrapper = new LambdaQueryWrapper<>();
         watchListMapperLambdaQueryWrapper.eq(WatchList::getUserId,userId).eq(WatchList::getWatchTicker,ticker);
         int delete = watchListMapper.delete(watchListMapperLambdaQueryWrapper);
