@@ -1,5 +1,7 @@
 server:
   port: 9030
+  servlet:
+    context-path: /analyze
 spring:
   application:
     name: analyzeservice
@@ -12,3 +14,6 @@ spring:
   cloud:
     nacos:
       server-addr: localhost:8848 # Nacos地址
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

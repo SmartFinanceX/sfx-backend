@@ -31,7 +31,7 @@ public class RequestLogFilter implements WebFilter ,Ordered{
         val authentication = SecurityContextHolder.getContext().getAuthentication();
         log.info("RequestLogFilter");
         log.info(exchange.getRequest().getMethod() +" "+ exchange.getRequest().getURI());
-        log.info("Authority "+SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString());
+        // log.info("Authority "+SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString());
         return chain.filter(exchange);
     }
 

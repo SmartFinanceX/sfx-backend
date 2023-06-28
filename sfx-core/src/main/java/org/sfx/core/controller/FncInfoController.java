@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FncInfoController {
     @Autowired
     FinaInfoService finaInfoService;
-    @GetMapping("{ticker}/{category}")
+    @GetMapping("/{ticker}/{category}")
     ResponseResult getFinanceReportInfo(@PathVariable String ticker,@PathVariable Short category) {
         return finaInfoService.getFinanceReportInfo(ticker,category);
     }
