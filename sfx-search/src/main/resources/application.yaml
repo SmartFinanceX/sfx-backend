@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:9980/sfx_db?characterEncoding=utf-8&serverTimezone=UTC-8&zeroDateTimeBehavior=CONVERT_TO_NULL
+    password: 123456
+    username: root
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+    sentinel:
+      web-context-unify: true
+      transport:
+        dashboard: localhost:8080
+  application:
+    name: searchservice
+server:
+  port: 9002
+feign:
+  sentinel:
+    enabled: true

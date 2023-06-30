@@ -1,0 +1,9 @@
+FROM java:openjdk-8u111-alpine
+
+EXPOSE 8848
+COPY . /app/
+
+WORKDIR /app
+
+RUN chmod +x bin/startup.sh
+CMD ["/bin/sh","/app/bin/startup.sh"]

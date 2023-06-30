@@ -157,4 +157,15 @@
             <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>application.yml</include>
+                    <include>application-prod.yml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 </project>

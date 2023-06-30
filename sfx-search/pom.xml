@@ -9,7 +9,7 @@
     </parent>
     <groupId>org.sfx.search</groupId>
     <artifactId>sfx-search</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>sfx-search</name>
     <description>sfx-backend-search</description>
     <properties>
@@ -93,8 +93,24 @@
                         </exclude>
                     </excludes>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中 -->
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>application*.yaml</include>
+                    <include>application.yaml</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 
 </project>
