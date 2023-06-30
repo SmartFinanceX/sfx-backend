@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>org.sfx</groupId>
 	<artifactId>sfx-core</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<name>sfx-core</name>
 	<description>智能财务系统后端核心</description>
 	<properties>
@@ -130,8 +130,7 @@
 			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
-					<include>application*.yaml</include>
-					<include>application.yaml</include>
+                    <include>*</include>
 				</includes>
 			</resource>
 		</resources>
