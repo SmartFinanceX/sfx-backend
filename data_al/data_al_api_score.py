@@ -1,11 +1,15 @@
 from flask import Flask, render_template, request, jsonify
 import json
-import data_al_sfr_version1
+import data_al_api_calculate_version2
 import requests
 
 app = Flask(__name__)
 
-@app.route('/stock/predict', methods=['POST'])
+@app.route('/')
+def index():
+    return render_template('calculate_scores.html')
+
+@app.route('/stock/calculate_scores', methods=['POST'])
 def calculate_scores():
     if request.method == 'POST':
         # 获取 JSON 数据
@@ -25,14 +29,8 @@ def calculate_scores():
         if response.status_code == 200:
             # 获取响应内容
             data = response.json()  # 假设服务器返回JSON格式的数据
-        
-            # 返回统计结果
-            return json.dumps(data_al_sfr_version1.predict(data))
-        else:
-            attention = str(response.status_code) + 'request data gets wrong.'
-            return attention
-
-
+        # 返回统计结果
+            return json.dumps(data_al_api_calculate_version2.calculate(data))
 
 if __name__ == '__main__':
     app.run(debug=True)
