@@ -6,7 +6,7 @@ import nacos
 from flask import Flask
 app = Flask(__name__)
 
-SERVER_ADDRESSES = "150.158.161.165:8848"
+SERVER_ADDRESSES = "124.222.191.199:8848"
 NAMESPACE = "public"
 
 
