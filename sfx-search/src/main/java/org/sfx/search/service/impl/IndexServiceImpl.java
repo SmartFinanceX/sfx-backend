@@ -38,8 +38,9 @@ public class IndexServiceImpl implements IndexService {
             for(LinkedHashMap<String,Object> incBasicInfo:(ArrayList<LinkedHashMap<String,Object>>)allInc.getData()) {
                 String sourceJson = JSON.toJSONString(incBasicInfo);// TODO(AntiO2) 加快此处
                 try {
-                    restHighLevelClient.index( new IndexRequest("inc").id((String) incBasicInfo.get("ticker")).source(sourceJson, XContentType.JSON),
+                    restHighLevelClient.index(new IndexRequest("inc").id((String) incBasicInfo.get("ticker")).source(sourceJson, XContentType.JSON),
                             RequestOptions.DEFAULT);
+                    log.debug("add " + incBasicInfo.get("ticker"));
                 } catch (IOException e) {
                     log.error(e.getMessage());
                     return -1;

@@ -6,7 +6,7 @@
 
     <groupId>org.sfx</groupId>
     <artifactId>sfx-backend</artifactId>
-    <version>1.0</version>
+    <version>1.0.3</version>
     <packaging>pom</packaging>
     <modules>
         <module>sfx-core</module>
@@ -23,6 +23,7 @@
     </parent>
 
     <properties>
+        <project.version>1.0.3</project.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
@@ -34,6 +35,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.sfx</groupId>
+                <artifactId>sfx-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- springCloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -157,4 +163,15 @@
             <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>application.yml</include>
+                    <include>application-prod.yml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 </project>

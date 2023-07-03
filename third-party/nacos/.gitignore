@@ -2,3 +2,4 @@
 **/nacos/logs
 *.log
 data/
+!target/*

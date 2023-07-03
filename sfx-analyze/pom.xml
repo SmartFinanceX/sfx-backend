@@ -3,13 +3,13 @@
     <parent>
         <artifactId>sfx-backend</artifactId>
         <groupId>org.sfx</groupId>
-        <version>1.0</version>
+        <version>1.0.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>sfx-analyze</artifactId>
     <packaging>jar</packaging>
-
+    <version>${project.version}</version>
     <name>sfx-analyze</name>
     <url>http://maven.apache.org</url>
 
@@ -21,7 +21,6 @@
         <dependency>
             <groupId>org.sfx</groupId>
             <artifactId>sfx-api</artifactId>
-            <version>1.0</version>
         </dependency>
 
         <dependency>
@@ -46,4 +45,37 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中 -->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>application*.yaml</include>
+                    <include>application.yaml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
 </project>

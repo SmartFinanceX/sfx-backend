@@ -11,22 +11,26 @@ Spring:
         locator:
           enabled: true
       routes: # 网关路由配置
-        - id: core-service # 路由id，自定义，只要唯一即可
+        - id: core-service # 信息服务器
           uri: lb://coreservice
-          predicates: # 路由断言，也就是判断请求是否符合路由规则的条件
+          predicates:
             - Path=/inc/**
-        - id: search-service
+        - id: search-service # 搜索服务器
           uri: lb://searchservice
           predicates:
             - Path=/_search/**
-        - id: uaa-service
+        - id: uaa-service # 认证服务器
           uri: lb://authservice
           predicates:
             - Path=/uaa/**
-        - id: analyze-service
+        - id: analyze-service # 个人财务分析服务器
           uri: lb://analyzeservice
           predicates:
             - Path=/analyze/**
+        - id: stock-service # 股价及预测分析服务器
+          uri: lb://stockservice
+          predicates:
+            - Path=/stock/**
 server:
   port: 9000
 spring:

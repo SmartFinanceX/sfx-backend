@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:9980/sfx_db?characterEncoding=utf-8&serverTimezone=UTC-8&zeroDateTimeBehavior=CONVERT_TO_NULL
+    type: com.alibaba.druid.pool.DruidDataSource
+  cloud:
+    nacos:
+      discovery:
+        ip: localhost # 这里写服务器本身的地址
+      server-addr: localhost:8848 # Nacos地址

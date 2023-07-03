@@ -5,11 +5,10 @@
 	<parent>
 		<groupId>org.sfx</groupId>
 		<artifactId>sfx-backend</artifactId>
-		<version>1.0</version>
+		<version>1.0.3</version>
 	</parent>
-	<groupId>org.sfx</groupId>
 	<artifactId>sfx-core</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.3</version>
 	<name>sfx-core</name>
 	<description>智能财务系统后端核心</description>
 	<properties>
@@ -117,8 +116,23 @@
 						</exclude>
 					</excludes>
 				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中 -->
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+                    <include>*</include>
+				</includes>
+			</resource>
+		</resources>
 	</build>
 
 </project>

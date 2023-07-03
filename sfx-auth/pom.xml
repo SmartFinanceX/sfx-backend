@@ -3,11 +3,12 @@
     <parent>
         <artifactId>sfx-backend</artifactId>
         <groupId>org.sfx</groupId>
-        <version>1.0</version>
+        <version>1.0.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sfx-auth</artifactId>
     <name>sfx-auth</name>
+    <version>1.0.3</version>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
@@ -58,4 +59,20 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

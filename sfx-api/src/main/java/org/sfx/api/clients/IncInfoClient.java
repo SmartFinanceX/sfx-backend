@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@FeignClient(name = "coreservice",url="coreservice")
+@FeignClient("coreservice")
 @RequestMapping("/inc")
 public interface IncInfoClient {
-    @GetMapping("/_all")
+    @GetMapping("")
     ResponseResult getAllInc();
 
     @GetMapping("/_ticker/{ticker}")
