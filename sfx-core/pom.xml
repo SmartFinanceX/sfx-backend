@@ -5,11 +5,10 @@
 	<parent>
 		<groupId>org.sfx</groupId>
 		<artifactId>sfx-backend</artifactId>
-		<version>1.0</version>
+		<version>1.0.3</version>
 	</parent>
-	<groupId>org.sfx</groupId>
 	<artifactId>sfx-core</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<name>sfx-core</name>
 	<description>智能财务系统后端核心</description>
 	<properties>

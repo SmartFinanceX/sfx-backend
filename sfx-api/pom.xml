@@ -3,10 +3,11 @@
     <parent>
         <artifactId>sfx-backend</artifactId>
         <groupId>org.sfx</groupId>
-        <version>1.0</version>
+        <version>1.0.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sfx-api</artifactId>
+    <version>1.0.3</version>
     <name>sfx-api</name>
     <url>http://maven.apache.org</url>
     <dependencies>

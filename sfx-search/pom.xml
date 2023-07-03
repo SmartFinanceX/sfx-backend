@@ -5,11 +5,11 @@
     <parent>
         <groupId>org.sfx</groupId>
         <artifactId>sfx-backend</artifactId>
-        <version>1.0</version>
+        <version>1.0.3</version>
     </parent>
     <groupId>org.sfx.search</groupId>
     <artifactId>sfx-search</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.3</version>
     <name>sfx-search</name>
     <description>sfx-backend-search</description>
     <properties>

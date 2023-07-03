@@ -3,13 +3,13 @@
     <parent>
         <artifactId>sfx-backend</artifactId>
         <groupId>org.sfx</groupId>
-        <version>1.0</version>
+        <version>1.0.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>sfx-analyze</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.2</version>
+    <version>${project.version}</version>
     <name>sfx-analyze</name>
     <url>http://maven.apache.org</url>
 
@@ -21,7 +21,6 @@
         <dependency>
             <groupId>org.sfx</groupId>
             <artifactId>sfx-api</artifactId>
-            <version>1.0</version>
         </dependency>
 
         <dependency>
