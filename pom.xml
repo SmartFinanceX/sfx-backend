@@ -9,12 +9,14 @@
     <version>1.0.3</version>
     <packaging>pom</packaging>
     <modules>
+        <!--子模块-->
         <module>sfx-core</module>
         <module>sfx-search</module>
         <module>sfx-api</module>
         <module>sfx-gateway</module>
         <module>sfx-auth</module>
         <module>sfx-analyze</module>
+        <module>sfx-user</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
