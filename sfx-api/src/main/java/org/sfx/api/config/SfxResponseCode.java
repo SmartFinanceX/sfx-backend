@@ -21,14 +21,18 @@ public class SfxResponseCode {
     public static int INDEX_NOT_FIND=4202;
     /**
      * Mysql数据库创建失败
-     *
      */
-    public static int MYSQL_CREATE_ERROR=4301;
+    public static int MYSQL_CREATE_ERROR = 4301;
     /**
      * Mysql数据库访问失败
-     *
      */
-    public static int MYSQL_SEARCH_ERROR=4302;
-
-
+    public static int MYSQL_SEARCH_ERROR = 4302;
+    /**
+     * 插入数据失败
+     */
+    public static int MYSQL_INSERT_ERROR = 4303;
+    /**
+     * 非法输入
+     */
+    public static int ILLEGAL_INPUT = 4302;
 }
