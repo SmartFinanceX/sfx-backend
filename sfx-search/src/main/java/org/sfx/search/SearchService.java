@@ -23,7 +23,7 @@ public class SearchService {
     @Bean
     public RestHighLevelClient restHighLevelClient(){
         return new RestHighLevelClientBuilder(RestClient.builder(
-                HttpHost.create("http://150.158.161.165:9200")).build()  // TODO(Antio2) change url
+                HttpHost.create("http://1.117.68.109:9200")).build()  // TODO(Antio2) change url
         ).setApiCompatibilityMode(true).build();
     }
 }
