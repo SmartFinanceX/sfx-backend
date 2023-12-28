@@ -34,5 +34,5 @@ public class SfxResponseCode {
     /**
      * 非法输入
      */
-    public static int ILLEGAL_INPUT = 4302;
+    public static int ILLEGAL_INPUT = 4304;
 }
